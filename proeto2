@@ -1,0 +1,30 @@
+from turtle import Turtle
+
+t = Turtle() #iniciar a turtle
+t.speed(1)  #determinar a velocidade
+while True:
+    direcao = input("você quer ir pra frente ou para tras?")
+    if direcao == "frente" :
+        distancia = int(input("quantos pixels devem ser percorridos? "))
+        direcao2 = input("você quer movimentar para a direita ou para a esquerda? ")
+        if direcao2 == "direita" :
+            angulo = int(input("quantos angulos para direita devemos rotacionar? "))
+            t.right(angulo)
+        else:
+            angulo = int(input("quantos angulos para direita devemos rotacionar? "))
+            t.left(dangulo)
+        t.forward(distancia)
+    if direcao == "tras": #so repetir para a esquerda
+        distancia = int(input("quantos pixels devem ser percorridos? "))
+        direcao2 = input("você quer movimentar para a direita ou para a esquerda? ")
+        if direcao2 == "direita" :
+            angulo = int(input("quantos angulos para direita devemos rotacionar? "))
+            t.right(angulo)
+        else:
+            angulo = int(input("quantos angulos para direita devemos rotacionar? "))
+            t.left(dangulo)
+    t.forward(distancia) 
+
+    resposta = input("continuar a andar?") # terminar o codigo
+    if resposta not in ("sim"):
+        break
