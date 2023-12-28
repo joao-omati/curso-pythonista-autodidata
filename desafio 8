@@ -1,0 +1,4 @@
+def gerar_nome_completo(nome, sobrenome):
+    print(f"{nome}, {sobrenome}")
+
+gerar_nome_completo("joao", "omati")
