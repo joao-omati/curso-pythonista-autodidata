@@ -1,0 +1,4 @@
+def calcular_valores(preco, quantidade=1):
+    print(preco*quantidade)
+
+calcular_valores(5,6)
