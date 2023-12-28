@@ -1,0 +1,4 @@
+senha = ""
+while senha != "secreto":
+    senha = input(print("digite sua senha: "))
+print("bem vindo")
