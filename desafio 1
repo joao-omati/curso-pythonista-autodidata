@@ -1,0 +1,9 @@
+cabelo = int(input("digite o tamanho do cabelo em cm: "))
+if cabelo <= 20:
+    print("voce paga o valor de 50 reais")
+elif 21 <= cabelo >= 30:
+    print("voce paga o valor de 70 reais")
+elif 31 <= cabelo >= 50:
+    print("voce paga o valor de 100 reais")
+else:
+    print("consulte o valor na recepção")
