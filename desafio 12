@@ -1,0 +1,12 @@
+def pai(numero):
+    def filho_1():
+        print("sou filho 1")
+    def filho_2():
+        print("sou filho 2")
+    if numero == 1:
+        return filho_1 #retornando a função sem o (),ou seja,nao estou executando a função
+    #e sim retornando a referencia para ser utilizada em outro momento
+
+resultado = pai(1)  #porque retornou a referencia so que como foi passado para resultado assim que definir a função ela vai aparecer
+
+resultado()
