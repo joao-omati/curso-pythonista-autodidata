@@ -1,0 +1,13 @@
+#decorators
+def meu_decorator(funcao):
+    def batata():
+        print("antes")
+        funcao()
+        print("depois")
+    return batata
+@meu_decorator  #usando isso
+def parabenizar():
+    print("parabains")
+
+parabenizar() #substitui isso resultado = meu_decorator(parabenizar) #nesse caso eu criei uma forma de garantier que algo sempre aconteça antes de uma função ser executada e sempre aconteça apos uma funçao seja executada
+#resultado()
