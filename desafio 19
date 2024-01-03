@@ -1,0 +1,15 @@
+from operator import itemgetter
+produtos = [
+    {"nome": "celular",
+     "preco": 1500
+    },
+
+    {"nome": "monitor",
+     "preco": 500
+     },
+     {"nome": "microfone",
+      "preco": 300
+      }
+]
+produtos.sort(key=itemgetter("preco"))
+print(produtos)4
