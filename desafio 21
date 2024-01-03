@@ -1,0 +1,4 @@
+from operator import itemgetter
+cotacao_moedas = [["usd",5.25], ["brl",1.56],["euro", 6.47] ]
+cotacao_moedas.sort(key=itemgetter(1))
+print(cotacao_moedas)
