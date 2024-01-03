@@ -1,2 +1,5 @@
-*lista_de_objetos = ["notebook", "celular", "mouse"]
-print(lista_de_objetos)
+lista_de_objetos = ["notebook", "celular", "mouse"]
+
+numeros = list(range(10,132))
+
+print(lista_de_objetos + numeros)
