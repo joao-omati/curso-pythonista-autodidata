@@ -1,0 +1,2 @@
+matriz_de_objetos = [["notebook", 5000],["celular", 2000],["mouse", 100]]
+print(matriz_de_objetos)
