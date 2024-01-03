@@ -1,0 +1,2 @@
+*lista_de_objetos = ["notebook", "celular", "mouse"]
+print(lista_de_objetos)
