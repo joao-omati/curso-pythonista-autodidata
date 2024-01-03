@@ -1,0 +1,8 @@
+from operator import itemgetter
+equipamento_filmagem = [
+    ("tripe", 300),
+    ("camera", 1700),
+    ("iluminação, 200"),
+]
+equipamento_filmagem.sort(key=itemgetter(1),reverse=True)
+print(equipamento_filmagem)
