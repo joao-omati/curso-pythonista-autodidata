@@ -1,0 +1,7 @@
+*import os
+
+
+frutas = ["laranja", "uva", "pera", "tomate", "banana"]
+with open("frutas.txt","a",newline = "") as arquivo:
+    for fruta in frutas:
+        arquivo.write(fruta + os.linesep)
