@@ -1,0 +1,8 @@
+*import json_
+with open ("desafio.json",encoding= "utf-8") as arquivo_json:
+    data = json.load(arquivo_json)
+    print(data["user"][1]["email"]) #imprimir o email do usuario com id 2
+
+    print(data["user"][0]["adress"]["city"]) #imprimir o ciry do usuario 1
+
+    print(data["user"][1]["orders"]["total"]) #imprimir o total do usuario com id 2
