@@ -1,0 +1,8 @@
+*import os
+
+
+
+linguagens = ["python", "java", "html", "jascript", "php"]
+with open("linguagens.txt","a",newline = "") as arquivo:
+    for linguagem in linguagens:
+        arquivo.write(linguagem + os.linesep)
