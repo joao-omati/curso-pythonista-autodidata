@@ -1,0 +1,14 @@
+
+*import json
+
+ usuario_json"""{
+    "name": "John Smith",
+    "age":30,
+    "city":"New York",
+    "isStudent": true,
+    "gpa": 3.5
+ }"""
+
+#salvar um string json -> arquivo json
+with open("desafio.json,"w",encoding = "utf-8") as arquivo json
+          json.dump(usuarios_json,arquivo_json)
