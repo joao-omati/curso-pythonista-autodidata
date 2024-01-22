@@ -1,0 +1,5 @@
+*import os
+
+with open("frutas.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha)
