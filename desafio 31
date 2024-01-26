@@ -1,0 +1,47 @@
+from flask import Flask, jnonify, requests
+
+app = Flask(__name__)
+cancoes = [
+    {
+        "cancao": "cancao1"
+        "estilo": "vaporwave"
+    },
+    {
+        "cancao": "cancao2"
+        "estilo": "pop"
+    },
+    {
+        "cancao": "cancao3"
+        "estilo": "rock"
+    }
+]
+
+@app.route("/cancoes",methods = ["GET"])
+def obter_todas_cancoes():
+    return jsonify(cancoes)
+
+@app.route("/cancoes/<int:cancao_id>", methods = ["GET"])
+def obter_cancao_por_id(cancao_id):
+    return jsonify(cancoes[cancao_id])
+
+@app.route("/cancoes",methods = ["POST"])
+def nova_cancao():
+    cancao = request.get_json()
+    cancoes.append(cancao)
+    return jsonify(f"a cancao: {cancao} foi adicionada com sucesso", 200)
+
+@app.route("/cancoes/<int:cancao_id>", methods = ["PUT"])
+def atualizar_cancao(cancao_id):
+    cancao_alterada = request.get_json()
+    cancoes[cancao_id].update(cancao_alterada)
+    return jsonify(cancoes[cancao_id], 200)
+
+@app.route("/cancoes/<int:cancao_id>", methods = [DELETE])
+def excluir_cancao(cancao_id):
+    try:
+        del cancoes[cancao_id]
+        return jsonify({"mensagem": "a canção foi excluida com sucesso"})
+    except:
+        jsonify("não foi encontrada uma canção com este id", 404)
+
+app.run(port=5000,host="localhost, debug=True")
