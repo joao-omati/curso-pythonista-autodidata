@@ -1,0 +1,4 @@
+from pprint import pprint
+participantes = ['joel','jessica','maria','cris','Larissa','rafael','marcus','john']
+pagamento_realizado = ['joel','jessica','marcia','cris']
+pprint([i + " PAGO" if i in pagamento_realizado else i + " DEVENDO" for i in participantes])
