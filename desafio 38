@@ -1,0 +1,21 @@
+#threads
+import threading
+import time
+
+def extrair_valor(site,produto):
+    print(f"navegando ate o site {site} e pesquisando sobre {produto}")
+    time.sleep(5)
+    print(f"{produto} processado com sucesso")
+
+threads = []
+produtos = ["celular","monitor","fone de ouvido","alto-falante","computador"]
+
+for i in range(5):
+    nova_thread = threading.Thread(target=extrair_valor, args=("https://www.mercadolivre.com.br", produtos[i]))
+    threads.append(nova_thread)
+
+for thread in threads:
+    thread.start()
+
+for thread in threads:
+    thread.join()
