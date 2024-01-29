@@ -1,0 +1,3 @@
+from pprint import pprint
+cores = ['vermelho','azul','verde','amarelo','rosa','preto']
+pprint([str(cores.index(i)+1) + " - " + i for i in cores])
