@@ -1,0 +1,14 @@
+#threads
+import threading
+
+def baixar_foto(site):
+    print(f"estamos baixando fotos no site {site}")
+
+
+def navegar_ate_site(site):
+    print(f"estamos navegando ate o site {site}")
+
+nova_thread = threading.Thread(target=baixar_foto, args=("https://www.facebook.com",), daemon=True)
+nova_thread.start()
+navegar_ate_site("https://www.facebook.com")
+nova_thread.join()
